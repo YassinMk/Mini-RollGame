@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400");
+body {
+  padding: 0;
+  margin: 0;
+  background: aqua;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  min-height: 100vh;
+}
+.container {
+  background-color: aliceblue;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 200px auto;
+  font-size: 12px;
+  border-radius: 15px;
+  font-weight: lighter;
+  box-shadow: 7px 25px 19px 5px rgba(0, 0, 0, 0.1);
+}
+.container > h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+.players {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.dice {
+  padding: 30px 15px;
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(254, 211, 182);
+  border-radius: 5px;
+}
+button {
+  padding: 15px 20px;
+  background-color: rgb(255, 137, 145);
+  color: white;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#resetBtn {
+  display: none;
+}
+.active {
+  border: 5px solid rgb(255, 137, 145);
+}
+.hidden {
+  display: none;
+}
+#emojiContainer {
+  position: relative;
+  animation: flyAnimation 3s linear infinite;
+}
+#emojiContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes flyAnimation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-200px, -200px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-400px, 400px);
+    opacity: 0;
+  }
+}
